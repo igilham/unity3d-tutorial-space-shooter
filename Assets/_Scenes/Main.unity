@@ -222,6 +222,7 @@ MonoBehaviour:
   - {fileID: 182138, guid: d7da80e426dcb1d458bfab6de5d2ea2c, type: 2}
   - {fileID: 161338, guid: af8902fd788d4a54d946bd569cd6f460, type: 2}
   - {fileID: 126748, guid: 898aa3693fbe0bb4baf74bf637e50aa1, type: 2}
+  - {fileID: 162656, guid: 5240f110dec75564382be93304b74565, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
   spawnWait: .5
   startWait: 1
