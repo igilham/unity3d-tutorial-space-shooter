@@ -37,11 +37,12 @@ public class EvasiveMovement : MonoBehaviour
     {
         float newMovement = Mathf.MoveTowards(rigidBody.velocity.x, targetX, Time.deltaTime * smoothing);
         rigidBody.velocity = new Vector3(newMovement, 0.0f, rigidBody.velocity.z);
-        rigidBody.position = new Vector3(
-            Mathf.Clamp(rigidBody.position.x, boundary.xMin, boundary.xMax),
-            0.0f,
-            Mathf.Clamp(rigidBody.position.z, boundary.zMin, boundary.zMax)
-        );
+        rigidBody.position = new Vector3
+            (
+                Mathf.Clamp(rigidBody.position.x, boundary.xMin, boundary.xMax),
+                0.0f,
+                Mathf.Clamp(rigidBody.position.z, boundary.zMin, boundary.zMax)
+            );
         rigidBody.rotation = Quaternion.Euler(0.0f, 0.0f, rigidBody.velocity.x * -tilt);
     }
 }
