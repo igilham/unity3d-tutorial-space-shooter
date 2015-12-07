@@ -29,6 +29,7 @@ GameObject:
   - 114: {fileID: 11489436}
   - 82: {fileID: 8292154}
   - 114: {fileID: 11401138}
+  - 114: {fileID: 11410452}
   m_Layer: 0
   m_Name: Enemy Ship
   m_TagString: Enemy
@@ -252,6 +253,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -5
+--- !u!114 &11410452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 452ee0491ce2b09478f9410786db0a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dodge: 5
+  smoothing: 7.5
+  tilt: 15
+  startDelay: {x: .5, y: 1}
+  movementTime: {x: .75, y: 1.5}
+  movementWait: {x: 1, y: 2}
+  boundary:
+    xMin: -6
+    xMax: 6
+    zMin: -20
+    zMax: 20
 --- !u!114 &11467846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1364,6 +1387,58 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: speed
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dodge
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: smoothing
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tilt
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: startDelay.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: startDelay.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: movementTime.x
+      value: .75
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: movementTime.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: movementWait.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: movementWait.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: boundary.xMin
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: boundary.xMax
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: boundary.zMin
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: boundary.zMax
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
