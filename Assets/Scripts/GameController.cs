@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
 
     public int hazzardCount;
-    public GameObject hazzard;
+    public GameObject[] hazzards;
     public Vector3 spawnValues;
     public float spawnWait;
     public float startWait;
@@ -58,6 +58,7 @@ public class GameController : MonoBehaviour
             {
                 var spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 var spawnRotation = Quaternion.identity;
+                var hazzard = hazzards[Random.Range(0, hazzards.Length)];
                 Instantiate(hazzard, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds(spawnWait);
             }
